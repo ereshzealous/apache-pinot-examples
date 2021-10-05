@@ -1,0 +1,48 @@
+{
+  "schemaName": "MovieRatingSchema",
+  "dimensionFieldSpecs": [
+    {
+      "name": "id",
+      "dataType": "STRING"
+    },
+    {
+      "name": "userId",
+      "dataType": "STRING"
+    },
+    {
+      "name": "movie",
+      "dataType": "STRING"
+    },
+    {
+      "name": "categories",
+      "dataType": "STRING",
+      "singleValueField": false
+    },
+    {
+      "name": "registeredUser",
+      "dataType": "STRING"
+    },
+    {
+      "name": "country",
+      "dataType": "STRING"
+    },
+    {
+      "name": "city",
+      "dataType": "STRING"
+    }
+  ],
+  "metricFieldSpecs": [
+    {
+      "name": "rating",
+      "dataType": "DOUBLE"
+    }
+  ],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "ratedOn",
+      "dataType": "STRING",
+      "format": "1:DAYS:SIMPLE_DATE_FORMAT:yyyy-MM-dd",
+      "granularity": "1:DAYS"
+    }
+  ]
+}

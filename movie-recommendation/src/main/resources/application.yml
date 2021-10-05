@@ -1,0 +1,28 @@
+
+server:
+  port: 9006
+
+spring:
+  cloud:
+    stream:
+
+      bindings:
+        eventProducer-out-0:
+          destination: movie-rating
+          content-type: 'application/json'
+
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true
+
+management:
+  endpoints:
+    web:
+      exposure.include: beans, env, health, info, metrics, mappings
+  endpoint:
+    health:
+      show-details: always
+  health:
+    probes:
+      enabled: true
